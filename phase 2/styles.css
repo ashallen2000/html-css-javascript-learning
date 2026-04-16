@@ -1,14 +1,15 @@
 :root {
-    --bg-page: #0d1210;
-    --bg-surface: #141c18;
-    --bg-card: #1c2820;
-    --bg-elevated: #243028;
-    --border: #2e3d34;
-    --accent: #4eca7f;
-    --accent-hover: #3aaa68;
-    --text-primary: #e8ede9;
-    --text-muted: #8fa898;
-    --text-on-accent: #0d2918;
+    --bg-page: #0a0a0a;
+    --bg-surface: #1a1a1a;
+    --bg-card: #242424;
+    --bg-elevated: #2e2e2e;
+    --nav-bg:#010409;
+    --border: #3d3d3d;
+    --accent: #d4a832;
+    --accent-hover: #b88d20;
+    --text-primary: #f0ece0;
+    --text-muted: #9a9488;
+    --text-on-accent: #111111;
     font-size: 62.5%;
 }
 
@@ -16,6 +17,7 @@
 body {
     background-color: var(--bg-page);
     font-family: 'Arimo', sans-serif;
+    margin: 0;
 }
 
 
@@ -24,8 +26,11 @@ body {
 }
 
 #navbar {
-    margin-top: 20px;
+    padding-top: 10px;
     font-size: 2rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    border-bottom: 1px solid var(--border);
+    background-color: var(--nav-bg);
 }
 
 .nav-item {
@@ -38,8 +43,8 @@ body {
     max-width: 1440px;
     height: 50px;
     margin: 0 auto;
+    margin-bottom: 10px;
     padding: 0 50px;
-    background-color: var(--bg-elevated);
     text-decoration: none;
     border-radius: 15px;
     color: var(--text-primary);
@@ -68,6 +73,7 @@ body {
     display: flex;
     align-items: center;
     gap: 24px;
+    margin-left: 150px;
 
 }
 
@@ -75,6 +81,12 @@ body {
     margin-left: auto;
 }
 
+
+.nav-logo {
+    font-size:2.5rem;
+    word-spacing: 2ch;
+    font-weight: bold; 
+}
 
 .wrapper {
     margin: 0 auto;
@@ -94,12 +106,76 @@ body {
 }
 
 
+#sign-in-btn {
+    background-color: var(--accent);
+    color: var(--text-on-accent);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    
+}
+
+#sign-in-btn:hover {
+    background-color: var(--accent-hover);
+}
+
+
 
 .clubs-grid-container {
     display: grid;
+    max-width: 1440px;
+    margin: 0 auto;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
+    padding: 0 50px;
     margin: 0 auto;
 }
+
+
+.club-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    padding: 12px;
+    margin: 0;
+    background-color: var(--nav-bg);
+    border: 0.1px solid var(--accent);
+    border-radius: 10px;
+
+}
+
+.club-card img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.club-card h3 {
+    margin: 22px 0;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+}
+
+.club-card button {
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.btn-follow {
+    background-color: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.btn-website {
+    background-color: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
