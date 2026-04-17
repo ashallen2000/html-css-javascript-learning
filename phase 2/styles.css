@@ -19,6 +19,24 @@ body {
     background-color: var(--bg-page);
     font-family: 'Barlow', sans-serif;
     margin: 0;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23ffffff'/%3E%3C/svg%3E");
+    background-size: 24px 24px;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
+    animation: texture-pulse 6s ease-in-out infinite;
+}
+
+@keyframes texture-pulse {
+    0%, 100% { opacity: 0.03; }
+    50% { opacity: 0.07; }
 }
 
 #standings-header {
@@ -31,6 +49,8 @@ body {
     font-family: 'Barlow Condensed', sans-serif;
     border-bottom: 1px solid var(--border);
     background-color: var(--nav-bg);
+    position: relative;
+    z-index: 1;
 }
 
 .nav-item {
@@ -115,16 +135,16 @@ body {
 }
 
 .btn-follow {
-    background-color: var(--accent);
-    color: var(--text-on-accent);
-    border: 1px solid var(--accent);
+    background-color: var(--text-primary);
+    color: #0a0a0f;
+    border: 1px solid var(--text-primary);
     font-weight: 600;
 }
 
 .btn-website {
     background-color: transparent;
-    color: var(--accent);
-    border: 1px solid var(--accent);
+    color: var(--text-primary);
+    border: 1px solid var(--text-muted);
 }
 
 
@@ -156,6 +176,7 @@ body {
 .clubs-grid-container {
     display: grid;
     max-width: 1440px;
+    align-items: stretch;
     margin: 0 auto;
     margin-top: 50px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -169,13 +190,26 @@ body {
     flex-direction: row;
     background-color: var(--bg-card);
     color: var(--text-primary);
-    padding: 20px;
+    padding: 10px;
     align-items: center;
     margin: 0;
     gap: 10px;
     border-radius: 10px;
-    flex-grow: 1;
+    border: 1px solid transparent;
+    position: relative;
+    z-index: 1 ;
+}
 
+.club-card:hover {
+    border: 1px solid var(--accent);
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    flex-grow: 1;
 }
 
 .club-card img {
@@ -187,9 +221,8 @@ body {
 }
 
 .club-card h3 {
-    margin: 22px 0;
-    margin-bottom: 10px;
-    font-size: 1.8rem;
+    margin: 0;
+    font-size: 2.4rem;
 }
 
 .club-card button {
@@ -204,4 +237,6 @@ body {
     display: flex;
     gap: 10px;
 }
+
+
 
