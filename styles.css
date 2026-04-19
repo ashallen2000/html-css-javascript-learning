@@ -36,7 +36,7 @@ body::before {
 
 
 #navbar {
-    padding-top: 10px;
+    padding-top: 6px;
     font-size: 2rem;
     font-family: 'Barlow Condensed', sans-serif;
     border-bottom: 1px solid var(--border);
@@ -52,7 +52,7 @@ body::before {
 .navbar-inner {
     display: flex;
     align-items: center;
-    max-width: 1440px;
+    max-width: 1296px;
     height: 50px;
     margin: 0 auto;
     margin-bottom: 10px;
@@ -149,14 +149,14 @@ body::before {
 }
 
 .header-block {
-    max-width: 1440px;
+    max-width: 1296px;
     margin: 80px auto 20px;
     padding: 0 50px 2.4rem;
     border-bottom: 1px solid var(--border);
 }
 
 .main-header {
-    font-size: 15.5rem;
+    font-size: 11.5rem;
     font-weight: 600;
     color: var(--text-primary);
     margin: 0;
@@ -173,7 +173,7 @@ body::before {
 
 .clubs-grid-container {
     display: grid;
-    max-width: 1440px;
+    max-width: 1296px;
     align-items: stretch;
     margin: 0 auto;
     margin-top: 50px;
@@ -257,13 +257,59 @@ body::before {
     gap: 10px;
 }
 
-/* starting articles styling */
+/* starting articles styling - grid formation*/
 
 .articles-grid-wrapper {
     display: grid;
-    margin: 0 auto;
+    margin: 70px auto;
+    gap:100px;
     grid-template-columns: 1.7fr 1.3fr 1.3fr;
-    max-width: 1440px;
-    padding: 0 50px;
+    max-width: 1296px;
+    padding: 0 50px 40px;
+    min-height: calc(100vh - 210px)
 }
 
+/* universal styles for this section */
+.col-meta {
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+.articles-grid-wrapper img {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* styling column 1 - hero section of the grid */
+.col1-hero-header {
+    font-size: 6.4rem;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.col1-summary {
+    color: var(--text-primary);
+    font-size: 1.8rem;
+}
+
+.col1-hero-article img {
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+/* styling column 1 - end */
+
+/* styling column 2 - start */
+
+
+.article-headline {
+    font-size: 1.7rem;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.col2-wrap-grid > * {
+    padding-bottom: 20px;
+}
