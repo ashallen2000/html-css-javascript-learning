@@ -21,6 +21,7 @@ body {
     font-family: 'Barlow', sans-serif;
     margin: 0;
     position: relative;
+    overflow-y: scroll;
 }
 
 body::before {
@@ -43,6 +44,11 @@ body::before {
     background-color: var(--nav-bg);
     position: relative;
     z-index: 1;
+}
+
+.nav-logo  a {
+    text-decoration: none;
+    color: var(--text-primary)
 }
 
 .nav-item {
@@ -178,7 +184,7 @@ body::before {
     margin: 0 auto;
     margin-top: 50px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1.4fr));
-    gap: 50px;
+    gap: 30px;
     padding: 0 50px;
 }
 
@@ -265,7 +271,7 @@ body::before {
     gap:100px;
     grid-template-columns: 1.7fr 1.3fr 1.3fr;
     max-width: 1296px;
-    padding: 0 50px 40px;
+    padding: 0 50px 50px;
     min-height: calc(100vh - 210px)
 }
 
@@ -297,6 +303,7 @@ body::before {
 .col1-hero-article img {
     aspect-ratio: 3 / 2;
     object-fit: cover;
+    margin-bottom: 20px;
 }
 
 /* styling column 1 - end */
@@ -307,9 +314,41 @@ body::before {
 .article-headline {
     font-size: 1.7rem;
     color: var(--text-primary);
+    margin-top: 5px;
     margin-bottom: 10px;
 }
 
 .col2-wrap-grid > * {
     padding-bottom: 20px;
 }
+
+.col2-wrap-grid img {
+    margin-bottom: 10px;
+}
+
+/* styling column 2 - end */
+
+
+/* styling column 3 - start */
+.col3-wrap-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: start;
+    margin:0 auto;  
+}
+
+
+
+.col3-header {
+    font-size: 2.4rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+    font-weight: 100;
+}
+
+.kicker {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+    }
