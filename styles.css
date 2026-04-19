@@ -79,9 +79,7 @@ body::before {
     text-transform: uppercase;
     letter-spacing: 0.15em;
     color: var(--text-primary);
-    border: 1px solid var(--accent);
     padding: 5px 12px;
-    white-space: nowrap;
 }
 
 .nav-logo img {
@@ -259,5 +257,13 @@ body::before {
     gap: 10px;
 }
 
+/* starting articles styling */
 
+.articles-grid-wrapper {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1.7fr 1.3fr 1.3fr;
+    max-width: 1440px;
+    padding: 0 50px;
+}
 
