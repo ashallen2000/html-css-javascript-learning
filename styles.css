@@ -268,7 +268,7 @@ body::before {
 .articles-grid-wrapper {
     display: grid;
     margin: 70px auto;
-    gap:100px;
+    gap:120px;
     grid-template-columns: 1.7fr 1.3fr 1.3fr;
     max-width: 1296px;
     padding: 0 50px 50px;
@@ -353,3 +353,33 @@ body::before {
     margin-bottom: 5px;
     }
 
+/* styling column 3 - end */
+
+/* media queries - 768px - articles */
+
+@media (max-width: 768px) {
+    .articles-grid-wrapper {
+        grid-template-columns: 1fr;
+        gap:55px;
+        padding: 10px 20px;
+        margin-top: 25px;
+}
+
+    .main-header {
+        font-size: 6.2rem;
+    }
+
+    .col1-hero-header {
+        font-size: 3.2rem;
+    }
+
+    .col3-wrap-grid {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .header-block {
+        margin-top: 20px;
+    }
+}
