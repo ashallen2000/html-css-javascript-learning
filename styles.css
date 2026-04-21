@@ -319,7 +319,9 @@ body::before {
 }
 
 .col2-wrap-grid > * {
-    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-left: 1px solid var(--border);
+    padding-left: 12px;
 }
 
 .col2-wrap-grid img {
@@ -335,7 +337,12 @@ body::before {
     flex-direction: column;
     gap: 10px;
     justify-content: start;
-    margin:0 auto;  
+    margin:0 auto;
+}
+
+.col3-wrap-grid > *:not(h4) {
+    border-left: 1px solid var(--border);
+    padding-left: 12px;
 }
 
 
@@ -367,6 +374,7 @@ body::before {
 
     .main-header {
         font-size: 6.2rem;
+        margin: 0px;
     }
 
     .col1-hero-header {
@@ -377,9 +385,14 @@ body::before {
         flex-direction: column;
         flex-wrap: wrap;
         gap: 20px;
+        margin: 0;
     }
 
     .header-block {
         margin-top: 20px;
     }
-}
+
+    .nav-links {
+        display: none;
+    }
+} 
