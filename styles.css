@@ -306,6 +306,11 @@ body::before {
     margin-bottom: 20px;
 }
 
+/* hover states */
+.col1-hero-article:hover > .col1-hero-header {
+    text-decoration: underline;
+}
+
 /* styling column 1 - end */
 
 /* styling column 2 - start */
@@ -360,7 +365,18 @@ body::before {
     margin-bottom: 5px;
     }
 
+/* hover states */
+.col3-wrap-grid section:hover > h3 {
+    text-decoration: underline;
+}
+
+
 /* styling column 3 - end */
+
+/* hover states */
+.col2-wrap-grid section:hover > h3 {
+    text-decoration: underline;
+}
 
 /* media queries - 768px - articles */
 
@@ -386,6 +402,8 @@ body::before {
         flex-wrap: wrap;
         gap: 20px;
         margin: 0;
+        display: none;
+        /*styling is incase i change my mind and want it to appear */
     }
 
     .header-block {
@@ -396,3 +414,5 @@ body::before {
         display: none;
     }
 } 
+
+/* media queries - 769px to 1200px - articles */
